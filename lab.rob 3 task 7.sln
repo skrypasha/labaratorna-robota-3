@@ -1,31 +1,37 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.11.35303.130
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab.rob 3 task 7", "lab.rob 3 task 7.vcxproj", "{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Debug|x64.ActiveCfg = Debug|x64
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Debug|x64.Build.0 = Debug|x64
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Debug|x86.ActiveCfg = Debug|Win32
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Debug|x86.Build.0 = Debug|Win32
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Release|x64.ActiveCfg = Release|x64
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Release|x64.Build.0 = Release|x64
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Release|x86.ActiveCfg = Release|Win32
-		{DE3A8350-3590-4DD4-B8B7-FB95C952D08D}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {06B39D56-3AF6-42DA-A1B6-E64428F3AFBC}
-	EndGlobalSection
-EndGlobal
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+// Площа квадрата
+double areaSquare(double side) {
+    return side * side;
+}
+
+// Площа прямокутника
+double areaRectangle(double length, double width) {
+    return length * width;
+}
+
+// Площа кола
+double areaCircle(double radius) {
+    return M_PI * radius * radius;
+}
+
+// Площа трикутника
+double areaTriangle(double base, double height) {
+    return 0.5 * base * height;
+}
+
+int main() {
+    setlocale(0, ".1251");
+    cout << "Площа квадрата: " << areaSquare(4) << endl;
+    cout << "Площа прямокутника: " << areaRectangle(4, 5) << endl;
+    cout << "Площа кола: " << areaCircle(3) << endl;
+    cout << "Площа трикутника: " << areaTriangle(3, 6) << endl;
+    return 0;
+}
+
